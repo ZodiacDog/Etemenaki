@@ -104,14 +104,21 @@ Complete a level, earn a puzzle piece. 50 pieces build a **Tower of Babel** with
 ```bash
 # Step 1: Download
 git clone https://github.com/ZodiacDog/Etemenaki.git
+cd Etemenaki
 
-# Step 2: Open
-open etemenaki/ETEMENAKI_50_LEVELS.html
-
-# There is no Step 3.
+# Step 2: Open the game in a browser
+# macOS: open ETEMENAKI_50_LEVELS.html
+# Linux: xdg-open ETEMENAKI_50_LEVELS.html
+# Windows: start ETEMENAKI_50_LEVELS.html
 ```
 
 Or just download `ETEMENAKI_50_LEVELS.html` directly and double-click it.
+
+To check the packaged level counts:
+
+```bash
+node tests/count_levels.js
+```
 
 ---
 
