@@ -1,217 +1,84 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/LANGUAGES-Python%20%7C%20JavaScript%20%7C%20Rust-FF6600?style=for-the-badge" alt="Languages"/>
-  <img src="https://img.shields.io/badge/LEVELS-50-FFD700?style=for-the-badge" alt="50 Levels"/>
-  <img src="https://img.shields.io/badge/DEPENDENCIES-ZERO-7ED321?style=for-the-badge" alt="Zero Dependencies"/>
-  <img src="https://img.shields.io/badge/LICENSE-MIT-blue?style=for-the-badge" alt="MIT License"/>
-</p>
+# Contributing to ETEMENAKI
 
-<h1 align="center">🏛️ ETEMENAKI</h1>
+Thank you for your interest in contributing to ETEMENAKI. This document outlines how to contribute effectively.
 
-<h3 align="center">Learn 3 Programming Languages in 30 Minutes.</h3>
+## Core Principles
 
-<p align="center">
-  <em>One HTML file. 50 levels. Zero install. Open it and start coding.</em>
-</p>
+ETEMENAKI follows the ML Innovations "We DO" philosophy. Contributions should be production-ready, tested, and complete. No half measures.
 
-<p align="center">
-  <a href="ETEMENAKI_50_LEVELS.html"><strong>⚡ Download & Play Now</strong></a>
-</p>
+## How to Contribute
 
----
+### Reporting Issues
 
-## The Pitch
+Open a GitHub Issue with:
+- What you expected to happen
+- What actually happened
+- Browser and OS information
+- Screenshot if relevant
 
-You know how Duolingo teaches Spanish by pattern recognition instead of grammar drills?
+### Content Contributions
 
-**ETEMENAKI does that for programming.**
+The highest-impact contributions are deepening level content. Each level should have 4 genuinely unique code examples that teach different aspects of the topic.
 
-You see the same concept in Python, JavaScript, and Rust — side by side — and your brain stops memorizing syntax and starts recognizing *patterns*. The five patterns that exist in every programming language ever written.
+When writing level content:
+- All code must be syntactically correct in Python, JavaScript, AND Rust
+- Examples should build progressively within the level (simple → complex)
+- Practice validators must check for specific keywords relevant to the concept, never just code length
+- Game questions should test understanding, not memorization
+- Assessment questions should require real comprehension
 
-30 minutes later, you can read code in three languages. 25 hours later, you're writing production software.
+### Code Contributions
 
-No account. No signup. No install. No internet required. Download one file, open it in your browser, and go.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Make your changes
+4. Test by opening the HTML file in Chrome, Firefox, and Safari
+5. Submit a Pull Request with a clear description
 
----
+### Style Guide
 
-## What Makes This Different
+ETEMENAKI is a single-file application. All HTML, CSS, and JavaScript live in one file.
 
-| | Traditional Course | ETEMENAKI |
-|---|---|---|
-| **Languages** | 1 at a time | 3 simultaneously |
-| **Time to "get it"** | Weeks | 30 minutes |
-| **Method** | Memorize syntax | Recognize patterns |
-| **Retention** | ~40% | ~80% (with replay) |
-| **Setup** | Install IDE, packages, accounts | Open a file |
-| **Cost** | $20-50/month | Free forever |
-| **Dependencies** | Node, Python, frameworks... | **Zero** |
+- CSS: Use CSS variables defined in `:root` for colors
+- JavaScript: No frameworks, vanilla JS only
+- Level Data: JSON structure with strict field requirements (see below)
 
----
+### Level Data Schema
 
-## How It Works
-
-### The 5 Universal Patterns
-
-Every programming language — Python, JavaScript, Rust, Go, Swift, C++, *all of them* — implements these five patterns:
-
-| # | Pattern | What It Means | Color |
-|---|---------|--------------|-------|
-| 1 | **STORAGE** | Names hold values | 🔵 Blue |
-| 2 | **DECISION** | Code branches on conditions | 🟡 Yellow |
-| 3 | **REPETITION** | Code runs multiple times | 🟢 Green |
-| 4 | **ENCAPSULATION** | Code packages into reusable units | 🟣 Purple |
-| 5 | **COMPOSITION** | Data groups into structures | 🟠 Orange |
-
-Once you see these patterns, you can read *any* programming language. ETEMENAKI makes you see them in 30 minutes by showing you the same concept in three syntaxes simultaneously.
-
-### The Learning Loop
-
-```
-📖 SEE IT  →  ✏️ DO IT  →  🎮 PROVE IT  →  🏆 MASTER IT
- (Example)    (Practice)    (Game)          (Challenge)
-  60 sec       90 sec       30 sec           3 min
+Every level must contain:
+```json
+{
+  "id": 1,
+  "title": "Storage & Types",
+  "tier": 1,
+  "tierName": "FOUNDATION",
+  "pattern": "STORAGE",
+  "patternColor": "#4A90E2",
+  "patternEmoji": "📦",
+  "description": "Names hold values...",
+  "examples": [4 items],
+  "practices": [4 items],
+  "games": [4 items],
+  "challenge": {1 item},
+  "assessment": [5 items]
+}
 ```
 
-Every concept follows this cycle. You never go more than 90 seconds between seeing something and doing it yourself. No forgetting curve.
+### Practice Validator Rules
 
-### The Puzzle
+Every practice `check` field must use `code.includes()` to verify the student wrote relevant code. Pure length checks (`code.length > 20`) are not acceptable.
 
-Complete a level, earn a puzzle piece. 50 pieces build a **Tower of Babel** with a secret message that reveals itself as you progress. Because ETEMENAKI *is* the Tower of Babel — built correctly this time.
+Good: `"code.includes('def') && code.includes('return') && code.includes('if')"`
+Bad: `"code.length > 30"`
 
----
+## Code of Conduct
 
-## 50 Levels Across 5 Tiers
+Be respectful, constructive, and focused on making ETEMENAKI better for learners. Technical disagreements should be resolved with evidence and testing, not authority.
 
-```
-🏆 TIER 5: MASTERY ........... Levels 46-50  ▐████▌      2.5 hrs
-🔬 TIER 4: ADVANCED .......... Levels 31-45  ▐████████████████▌  7.5 hrs
-🌍 TIER 3: REAL-WORLD ........ Levels 16-30  ▐████████████████▌  7.5 hrs
-🔗 TIER 2: COMBINATION ....... Levels  6-15  ▐██████████▌  5.0 hrs
-📦 TIER 1: FOUNDATION ........ Levels  1-5   ▐████▌      2.5 hrs
-                                              ─────────────────
-                                              Total: 25 hours
-```
+## Contact
 
-**Tier 1** — Variables, conditions, loops, functions, data structures
-**Tier 2** — Combined patterns, strings, errors, algorithms, debugging
-**Tier 3** — OOP, regex, JSON, APIs, databases, testing, async, files
-**Tier 4** — Ownership, closures, generics, web dev, security, architecture
-**Tier 5** — Language comparison, reading unfamiliar code, capstone project
+M. L. McKnight — ml.innovation.research.lab@gmail.com
 
 ---
 
-## Quick Start
-
-```bash
-# Step 1: Download
-git clone https://github.com/YOUR_USERNAME/etemenaki.git
-
-# Step 2: Open
-open etemenaki/ETEMENAKI_50_LEVELS.html
-
-# There is no Step 3.
-```
-
-Or just download `ETEMENAKI_50_LEVELS.html` directly and double-click it.
-
----
-
-## The Numbers
-
-- **426 KB** — The entire application, all 50 levels, all 3 languages
-- **200** practice exercises with real code validation
-- **200** pattern recognition games
-- **250** assessment questions
-- **50** master challenges
-- **0** dependencies
-- **0** accounts required
-- **0** internet required after download
-
----
-
-## Why One File?
-
-Because **friction kills learning**.
-
-Every `npm install` that fails, every Python version mismatch, every "please create an account" form — that's someone who wanted to learn programming and didn't.
-
-ETEMENAKI is one HTML file. It works on a Chromebook. It works on a phone. It works on an air-gapped computer in a library. It will work the same way in 2036.
-
-The best learning tool is the one you actually open.
-
----
-
-## The Philosophy
-
-> *"This repetition will help instill core fundamentals and will in-turn boost user confidence by demonstrating that not only CAN they program but they CAN program well."*
-
-ETEMENAKI doesn't give participation trophies. It gives you **proof**.
-
-- Not "Good job!" → **"You're 8 minutes faster than last time"**
-- Not "Keep trying!" → **"You used 0 hints (vs 5 last time)"**
-- Not "You're doing great!" → **"You're faster than 87% of learners"**
-
-Confidence that comes from evidence. Speed runs that prove mastery. Improvement you can measure.
-
----
-
-## Tech Stack
-
-```
-HTML     — Structure
-CSS      — 300+ rules, responsive, dark theme, animations
-JS       — Vanilla. No React. No Vue. No Angular. No jQuery.
-Canvas   — Tower of Babel puzzle rendering
-JSON     — 50 levels of structured educational content
-```
-
-That's it. That's the stack.
-
----
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md). Highest-impact contributions:
-
-- **Deepen level content** (Levels 20-50 can always use more unique examples)
-- **Add Pyodide** for live Python execution in the browser
-- **Add languages** — Go, Swift, TypeScript, C++
-- **Accessibility** — Screen readers, keyboard navigation
-- **Translations** — Localize instructions (code stays universal)
-
----
-
-## Roadmap
-
-- [ ] Live code execution (Pyodide for Python, native for JS)
-- [ ] Real leaderboards with anonymous rankings
-- [ ] Cloud progress sync (optional, privacy-first)
-- [ ] Levels 51-100: Language-specific deep dives
-- [ ] Mobile app
-- [ ] Natural language track (same methodology for Spanish, Mandarin, etc.)
-
----
-
-## License
-
-[MIT](LICENSE) — Use it, fork it, teach with it, sell courses with it. Just keep the attribution.
-
----
-
-<p align="center">
-  <strong>M. L. McKnight</strong><br/>
-  Founder & CTO, ML Innovations LLC<br/>
-  <em>Pheba, Mississippi</em><br/><br/>
-  ml.innovations.research.lab@gmail.com · 662-295-2269
-</p>
-
-<p align="center">
-  <em>"30 Minutes to Fluency. 25 Hours to Mastery."</em>
-</p>
-
-<p align="center">
-  <strong>The tower is real. Let's build it together.</strong>
-</p>
-
-<p align="center">
-  <sub>ML Innovations LLC — "We DO. Not prototype. Not plan. We BUILD."</sub>
-</p>
+ML Innovations LLC — Pheba, Mississippi

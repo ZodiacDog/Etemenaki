@@ -103,7 +103,7 @@ Complete a level, earn a puzzle piece. 50 pieces build a **Tower of Babel** with
 
 ```bash
 # Step 1: Download
-git clone https://github.com/YOUR_USERNAME/etemenaki.git
+git clone https://github.com/ZodiacDog/Etemenaki.git
 
 # Step 2: Open
 open etemenaki/ETEMENAKI_50_LEVELS.html
@@ -158,7 +158,7 @@ Confidence that comes from evidence. Speed runs that prove mastery. Improvement 
 
 ```
 HTML     — Structure
-CSS      — 300+ rules, responsive, dark theme, animations
+CSS      — about 114 rules (counted in the 2026-11 audit), responsive, dark theme, animations
 JS       — Vanilla. No React. No Vue. No Angular. No jQuery.
 Canvas   — Tower of Babel puzzle rendering
 JSON     — 50 levels of structured educational content
@@ -201,7 +201,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Highest-impact contributions:
   <strong>M. L. McKnight</strong><br/>
   Founder & CTO, ML Innovations LLC<br/>
   <em>Pheba, Mississippi</em><br/><br/>
-  ml.innovations.research.lab@gmail.com · 662-295-2269
+  ml.innovation.research.lab@gmail.com · 662-295-2269
 </p>
 
 <p align="center">
